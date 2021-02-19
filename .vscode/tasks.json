@@ -21,7 +21,10 @@
 			"dockerRun": {
 				"env": {
 					"FLASK_APP": "app.py"
-				}
+				},
+				"envFiles": [
+					".env"
+				]
 			},
 			"python": {
 				"args": [

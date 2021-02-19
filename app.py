@@ -1,6 +1,14 @@
 from flask import Flask, render_template
+import settings
 
 app = Flask(__name__)
+
+
+"""
+Below is an example of using python-dotenv
+
+print(settings.auth["username"])
+"""
 
 
 @app.route("/")
@@ -9,5 +17,5 @@ def hello_world():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000, debug=True)
+    app.run(host="127.0.0.1", port=5000, debug=True)
 
