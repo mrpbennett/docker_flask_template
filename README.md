@@ -6,7 +6,7 @@ The template is also set up to use `.env` files via `python-dotenv`.
 
 You will need to create a `.env` of your own, incase the `.gitignore` file didnt catch it during copying of this template.
 
-### Template structure
+## Template structure
 
 ```bash
 .
@@ -20,6 +20,26 @@ You will need to create a `.env` of your own, incase the `.gitignore` file didnt
 ├── settings.py
 └── templates
     └── index.html
+```
+
+## Simply Flask app
+
+This is the starting point of the Flask app, build on it as you see fit.
+
+```python
+from flask import Flask, render_template
+import settings
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def hello_world():
+    return render_template("index.html")
+
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=5000, debug=True)
 ```
 
 ### Packages included in template
