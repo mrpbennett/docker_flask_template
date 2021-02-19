@@ -4,6 +4,8 @@ A GitHub template for Flask running docker, also using TailwindCSS via CDN withi
 
 The template is also set up to use `.env` files via `python-dotenv`.
 
+You will need to create a `.env` of your own, incase the `.gitignore` file didnt catch it during copying of this template.
+
 
 ### Packages included in template
 
