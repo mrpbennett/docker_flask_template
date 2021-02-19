@@ -80,8 +80,7 @@ password = settings.auth['password']
 
 ## Using Tailwind CSS
 
-I have added Tailwind in it's most simplist form, via the CDN. You can read about using Tailwind via it's CDN [here](username = settings.auth['username']
-password = settings.auth['password'])
+I have added Tailwind in it's most simplist form, via the CDN. You can read about using Tailwind via it's CDN [here](https://tailwindcss.com/docs/installation#using-tailwind-via-cdn)
 
 ---
 
