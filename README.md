@@ -13,12 +13,12 @@ You will need to create a `.env` of your own, incase the `.gitignore` file didnt
 - [`python-dotenv`](https://pypi.org/project/python-dotenv/)
 - [TailWindCSS via their CDN](https://tailwindcss.com)
 
-### Using Flask
+## Using Flask
 
 The only thing you will need to do, is before running / building your app you will need to `export FLASK_APP=app.py` in your terminal
 
 
-### Using python-dotenv
+## Using python-dotenv
 
 I have included this as a package for the template as I appericate it's ease of use. You're able to easily use this within the `settings.py` file.
 
@@ -43,7 +43,7 @@ username = settings.auth['username']
 password = settings.auth['password']
 ```
 
-### Using Tailwind CSS
+## Using Tailwind CSS
 
 I have added Tailwind in it's most simplist form, via the CDN. You can read about using Tailwind via it's CDN [here](username = settings.auth['username']
 password = settings.auth['password'])
