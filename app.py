@@ -4,13 +4,6 @@ import settings
 app = Flask(__name__)
 
 
-"""
-Below is an example of using python-dotenv
-
-print(settings.auth["username"])
-"""
-
-
 @app.route("/")
 def hello_world():
     return render_template("index.html")
