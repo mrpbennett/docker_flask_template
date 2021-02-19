@@ -6,6 +6,21 @@ The template is also set up to use `.env` files via `python-dotenv`.
 
 You will need to create a `.env` of your own, incase the `.gitignore` file didnt catch it during copying of this template.
 
+### Template structure
+
+```bash
+.
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── app.py
+├── docker
+│   └── Dockerfile
+├── requirements.txt
+├── settings.py
+└── templates
+    └── index.html
+```
 
 ### Packages included in template
 
