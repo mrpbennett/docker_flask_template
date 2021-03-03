@@ -10,7 +10,7 @@ app.config["SECRET_KEY"] = secret_key
 
 @app.route("/")
 def function_name():
-    return render_template("index.html")
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
