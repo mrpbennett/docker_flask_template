@@ -1,11 +1,15 @@
 from flask import Flask, render_template
 import settings
+import secrets
+
+# generate a secret key via secrets
+secret_key = secrets.token_hex(16)
 
 app = Flask(__name__)
-
+app.config["SECRET_KEY"] = secret_key
 
 @app.route("/")
-def hello_world():
+def function_name():
     return render_template("index.html")
 
 
