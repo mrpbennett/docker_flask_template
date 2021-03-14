@@ -3,16 +3,10 @@
 An easy flask template with a sticky footer, with the help of Bootstrap
 
 - [Easy Flask 🥳](#easy-flask-)
-    - [Modules used in this templates](#modules-used-in-this-templates)
     - [Template structure](#template-structure)
     - [Switching between PROD and DEV](#switching-between-prod-and-dev)
     - [Config.py explained](#configpy-explained)
     - [Setting up your `.env` variables](#setting-up-your-env-variables)
-
-### Modules used in this templates
-
-- [flask-wtf-forms](https://flask-wtf.readthedocs.io/en/stable/)
-- [python-dotenv](https://github.com/theskumar/python-dotenv)
 
 ### Template structure
 
@@ -26,7 +20,6 @@ An easy flask template with a sticky footer, with the help of Bootstrap
 ├── config.py
 ├── docker
 │   └── Dockerfile
-├── forms.py
 ├── requirements.txt
 ├── static
 │   ├── css
@@ -34,13 +27,10 @@ An easy flask template with a sticky footer, with the help of Bootstrap
 │   └── js
 │       └── main.js
 └── templates
-    ├── about.html
     ├── errors
     │   └── 404.html
     ├── home.html
-    ├── layout.html
-    ├── login.html
-    └── signup.html
+    └── layout.html
 ```
 
 ### Switching between PROD and DEV

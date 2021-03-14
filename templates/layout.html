@@ -1,5 +1,4 @@
-<html lang="en" class="h-100">
-<head>
+<html lang="en" class="h-100"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -31,7 +30,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{url_for('home')}}">Easy Flask</a>
+                <a class="navbar-brand" href="#">Easy Flask</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,12 +40,12 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('second_page')}}">About</a>
+                            <a class="nav-link" href="#">Link</a>
                         </li>
                     </ul>
                     <form class="d-flex mb-0">
-                        <a href="{{ url_for('login') }}" class="btn btn-outline-success me-2">Login</a>
-                        <a href="{{ url_for('signup') }}" class="btn btn-outline-success">Sign Up</a>
+                        <button class="btn btn-outline-success me-2" type="submit">Login</button>
+                        <button class="btn btn-outline-success" type="submit">Sign Up</button>
                     </form>
                 </div>
             </div>
