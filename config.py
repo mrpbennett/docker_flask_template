@@ -29,6 +29,7 @@ class Config:
     SECRET_KEY = environ.get("SECRET_KEY")
     STATIC_FOLDER = "static"
     TEMPLATES_FOLDER = "templates"
+    SECRET_KEY = environ.get("SECRET_KEY")
 
 
 class ProdConfig(Config):
