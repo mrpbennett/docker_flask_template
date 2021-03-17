@@ -6,8 +6,8 @@
 			"label": "docker-build",
 			"platform": "python",
 			"dockerBuild": {
-				"tag": "dockerflask:latest",
-				"dockerfile": "${workspaceFolder}/docker/Dockerfile",
+				"tag": "easy_flask:latest",
+				"dockerfile": "${workspaceFolder}/Dockerfile",
 				"context": "${workspaceFolder}",
 				"pull": true
 			}

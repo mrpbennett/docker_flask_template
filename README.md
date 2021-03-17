@@ -1,6 +1,6 @@
 # Easy Flask 🥳
 
-An easy flask template with a sticky footer, with the help of Bootstrap
+An easy flask template with a sticky footer and proper typography styling. With the help of [TailWindCSS](https://tailwindcss.com) and their [typography package](https://github.com/tailwindlabs/tailwindcss-typography) via their CDN.
 
 - [Easy Flask 🥳](#easy-flask-)
     - [Modules used in this templates](#modules-used-in-this-templates)
@@ -8,6 +8,7 @@ An easy flask template with a sticky footer, with the help of Bootstrap
     - [Switching between PROD and DEV](#switching-between-prod-and-dev)
     - [Config.py explained](#configpy-explained)
     - [Setting up your `.env` variables](#setting-up-your-env-variables)
+- [Docker 🐳](#docker-)
 
 ### Modules used in this templates
 
@@ -18,25 +19,24 @@ An easy flask template with a sticky footer, with the help of Bootstrap
 
 ```bash
 .
+├── Dockerfile
 ├── LICENSE
 ├── Pipfile
 ├── Pipfile.lock
 ├── README.md
 ├── app.py
 ├── config.py
-├── docker
-│   └── Dockerfile
 ├── forms.py
 ├── requirements.txt
 ├── static
-│   ├── css
-│   │   └── main.css
-│   └── js
-│       └── main.js
+│   ├── css
+│   │   └── main.css
+│   └── js
+│       └── main.js
 └── templates
     ├── about.html
     ├── errors
-    │   └── 404.html
+    │   └── 404.html
     ├── home.html
     ├── layout.html
     ├── login.html
@@ -108,4 +108,14 @@ Then copy the output and place it within your new `.env` file.
 SECRET_KEY=
 PROD_DATABASE_URI=
 DEV_DATABASE_URI=
+```
+
+# Docker 🐳
+
+This template also includes a `Dockerfile` for you to use. You don't have to use this though. It also includes all the needed files to use the [Container](https://code.visualstudio.com/docs/remote/containers-tutorial) extention within VS Code.
+
+You will more than likely want to change the tag name. You can do this within `.vscode > tasks.json` and the  change the following line:
+
+```json
+"tag": "easy_flask:latest",
 ```

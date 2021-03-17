@@ -29,8 +29,12 @@ class SignUpForm(FlaskForm):
         validators=[DataRequired(), Email()],
         render_kw={"placeholder": "Email Addresss"},
     )
-    password = PasswordField("Password", validators=[DataRequired()])
+    password = PasswordField(
+        "Password", validators=[DataRequired()], render_kw={"placeholder": "***"}
+    )
     confirm_password = PasswordField(
-        "Confirm Password", validators=[DataRequired(), EqualTo("password")]
+        "Confirm Password",
+        validators=[DataRequired(), EqualTo("password")],
+        render_kw={"placeholder": "***"},
     )
     submit = SubmitField("Sign Up")
