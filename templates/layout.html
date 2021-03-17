@@ -9,8 +9,11 @@
         <title>Easy Flask</title>
     {% endif %}
 
-    <!-- BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- TAILWIND + TYPOGRAPHY CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/base.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/components.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/utilities.min.css" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -24,45 +27,35 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
 
 </head>
-<body class="d-flex flex-column h-100">
+<body class="flex flex-col min-h-screen">
 
     <!-- FIXED HEADER -->
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Easy Flask</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex mb-0">
-                        <button class="btn btn-outline-success me-2" type="submit">Login</button>
-                        <button class="btn btn-outline-success" type="submit">Sign Up</button>
-                    </form>
+    <header class="mb-5">
+        <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full bg-gray-700">
+            <div class="flex items-center mb-2 sm:mb-0">
+                <a class="text-2xl no-underline text-grey-darkest hover:text-blue-dark text-white" href="{{url_for('home')}}">Easy Flask</a>
+                <div class="ml-10 text-white">
+                    <a href="{{url_for('second_page')}}">About</a>
                 </div>
+            </div>
+            <div class="flex">
+                <a href="{{ url_for('login') }}" class="mr-5 border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">Login</a>
+                <a href="{{ url_for('signup') }}" class="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">Sign Up</a>
             </div>
         </nav>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-shrink-0">
+    <main class="flex-grow container mx-auto prose">
         <div class="container">
             {% block content %}{% endblock %}
         </div>
     </main>
 
     <!-- FOOTER CONTENT -->
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">Easy Flask created by <a href="https://github.com/mrpbennett">mrpbennett</a></span>
+    <footer>
+        <div class="container mx-auto py-3">
+            <span class="font-mono text-sm">Easy Flask created by <a href="https://github.com/mrpbennett">mrpbennett</a></span>
         </div>
     </footer>
 
